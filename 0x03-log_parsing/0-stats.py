@@ -65,10 +65,10 @@ try:
             print_statistics()
             counter = 0
 
-# except KeyboardInterrupt:
-#     # Handle CTRL + C gracefully
-#     print_statistics()
-#     sys.exit(0)
+except KeyboardInterrupt:
+    # Handle CTRL + C gracefully
+    print_statistics()
+    sys.exit(0)
 
 finally:
     # Ensure statistics are printed upon script termination
