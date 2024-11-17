@@ -1,9 +1,9 @@
 #!/usr/bin/node
-
-const request = require("request");
+// This script prints all characters of a Star Wars movie
+const request = require('request');
 
 if (process.argv.length !== 3) {
-  console.error("Usage: node starwars_characters.js <MovieID>");
+  console.error('Usage: node starwars_characters.js <MovieID>');
   process.exit(1);
 }
 
@@ -12,7 +12,7 @@ const apiUrl = `https://swapi.dev/api/films/${movieId}/`;
 
 request(apiUrl, (error, response, body) => {
   if (error) {
-    console.error("Error fetching data:", error);
+    console.error('Error fetching data:', error);
     return;
   }
 
@@ -28,7 +28,7 @@ request(apiUrl, (error, response, body) => {
     characterUrls.forEach((url) => {
       request(url, (charError, charResponse, charBody) => {
         if (charError) {
-          console.error("Error fetching character data:", charError);
+          console.error('Error fetching character data:', charError);
           return;
         }
 
@@ -44,6 +44,6 @@ request(apiUrl, (error, response, body) => {
       });
     });
   } catch (parseError) {
-    console.error("Error parsing data:", parseError);
+    console.error('Error parsing data:', parseError);
   }
 });
