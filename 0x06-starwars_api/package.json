@@ -1,0 +1,18 @@
+{
+  "name": "0x06-starwars_api",
+  "version": "1.0.0",
+  "description": "## Algorithm API JavaScript",
+  "main": "0-starwars_characters.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "semistandard",
+  "lint:fix": "semistandard --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.57.1",
+    "request": "^2.88.2",
+    "semistandard": "^17.0.0"
+  }
+}
